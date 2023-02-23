@@ -134,7 +134,7 @@ Resources:
   # Prometheus Resources
   PrometheusWorkspace:
     Type: AWS::APS::Workspace
-  OtelConfigParameter:
+  OtelConfigParameter1:
     Type: AWS::SSM::Parameter
     Properties:
       Name: otel-collector-config
@@ -220,4 +220,4 @@ Outputs:
     Value: !GetAtt 'PrometheusWorkspace.PrometheusEndpoint'
   OtelConfigName:
     Description: The name of the SSM Parameter holding the Opentelemetry Config.
-    Value: !Ref 'OtelConfigParameter'
+    Value: !Ref 'OtelConfigParameter1'
